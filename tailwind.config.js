@@ -7,10 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flex: {
+        '0': '0 0 auto'
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'banner-img': "url('/img/bg-header.webp')",
+      },
+      colors: {
+        'color-dark': '#1A1D2F',
+        'color-global': '#666666',
+        'color-second': '#6A324A',
+        'color-light': '#9D6284',
       },
     },
   },
