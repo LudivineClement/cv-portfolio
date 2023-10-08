@@ -10,3 +10,12 @@ body::-webkit-scrollbar-thumb, .scrollBar::-webkit-scrollbar-thumb {
   background-color: #CC9FBB;
   border-radius: 6px;
 }
+
+@keyframes animationMouse {
+  0% {
+    top: 9px;
+  }
+  100% {
+    top: 35px;
+  }
+}

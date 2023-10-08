@@ -11,11 +11,14 @@ module.exports = {
         '0': '0 0 auto'
       },
       backgroundImage: {
-        'banner-img': "url('/img/cloud.jpg')",
+        'banner-img': "url('/img/banner-home.webp')",
         'repeating-radial-gradient': '-webkit-repeating-radial-gradient(center center, #B378A0, #B378A0 1px, transparent 0px, transparent 100%)',
       },
       backgroundSize: {
         '6px': '6px 6px',
+      },
+      animation: {
+        'animationMouse': 'animationMouse 1.5s ease-in-out 0s normal none infinite',
       },
       colors: {
         'color-dark': '#1A1D2F',

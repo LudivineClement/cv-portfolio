@@ -54,7 +54,7 @@ const About = () => {
 
       <div className="bg-white rounded-lg p-6 shadow-md border-[1px] border-gray-100">
       <h3 className="text-2xl mb-4 font-bold text-slate-700 relative after:content-[''] after:absolute after:opacity-50 after:-top-1 after:-left-2 after:h-5 after:w-5 after:bg-6px after:z-0 after:bg-repeating-radial-gradient after:bg-repeat ">Centres <span className='text-color-light'>d'intérêt</span></h3>
-        <p className="mb-6 text-gray-600 [word-spacing:4px]">
+        <p className="text-gray-600 [word-spacing:4px]">
           Pâtisserie, cinéma, sports, documentaires historiques, de voyage ou scientifiques.
         </p>
       </div>
