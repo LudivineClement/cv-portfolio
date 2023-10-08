@@ -11,7 +11,7 @@ module.exports = {
         '0': '0 0 auto'
       },
       backgroundImage: {
-        'banner-img': "url('/img/bg-header.webp')",
+        'banner-img': "url('/img/cloud.jpg')",
         'repeating-radial-gradient': '-webkit-repeating-radial-gradient(center center, #B378A0, #B378A0 1px, transparent 0px, transparent 100%)',
       },
       backgroundSize: {
