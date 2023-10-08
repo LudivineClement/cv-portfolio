@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <nav className='w-[100px] bg-color-dark '>
       <ul className='flex flex-col items-center justify-center gap-y-4 py-5 text-white'>
-        {links.map((link) => (
+        {links.map((link, index) => (
           <li
-            key={link.text}
+            key={index}
             className='hover:text-color-light flex flex-col items-center border-b border-gray-800 pb-5 w-full last:border-none'
           >
             {link.href ? (

@@ -12,12 +12,16 @@ module.exports = {
       },
       backgroundImage: {
         'banner-img': "url('/img/bg-header.webp')",
+        'repeating-radial-gradient': '-webkit-repeating-radial-gradient(center center, #B378A0, #B378A0 1px, transparent 0px, transparent 100%)',
+      },
+      backgroundSize: {
+        '6px': '6px 6px',
       },
       colors: {
         'color-dark': '#1A1D2F',
-        'color-global': '#666666',
-        'color-second': '#6A324A',
-        'color-light': '#9D6284',
+        'color-global': '#5A626B',
+        'color-purple': '#9D6284',
+        'color-light': '#B378A0',
       },
     },
   },
