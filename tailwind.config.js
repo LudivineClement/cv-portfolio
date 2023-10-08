@@ -17,9 +17,6 @@ module.exports = {
       backgroundSize: {
         '6px': '6px 6px',
       },
-      animation: {
-        'animationMouse': 'animationMouse 1.5s ease-in-out 0s normal none infinite',
-      },
       colors: {
         'color-dark': '#1A1D2F',
         'color-global': '#5A626B',

@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+'use client'
+import { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import { BiSolidHome } from 'react-icons/bi';
 import { HiMiniUser, HiEnvelope, HiWrenchScrewdriver } from 'react-icons/hi2';
 import { FaGraduationCap } from 'react-icons/fa6';
@@ -17,28 +18,40 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState('home');
+
+  const handleSetActive = (section) => {
+    setActiveLink(section);
+  };
+
   return (
     <nav className='w-[100px] bg-color-dark '>
-      <ul className='flex flex-col items-center justify-center gap-y-4 py-5 text-white'>
+      <ul className='flex flex-col items-center justify-center text-white'>
         {links.map((link, index) => (
           <li
             key={index}
-            className='hover:text-color-light flex flex-col items-center border-b border-gray-800 pb-5 w-full last:border-none'
+            className={`hover:text-color-light flex flex-col items-center border-r-4  border-b border-b-gray-800 py-3 first:pt-5 w-full ${activeLink === link.section ? ' border-r-color-light' : 'border-r-transparent '}`}
           >
             {link.href ? (
-              <Link href={link.href} className='group flex flex-col' target='blank'>
+              <a href={link.href} className='group flex flex-col' target='blank'>
                 <div className="text-3xl mb-1 mx-auto transition-colors duration-300 group-hover:text-color-light">
                   {link.icon}
                 </div>
-                <div className='text-[10px] text-white '>{link.text}</div>
-              </Link>
+                <div className={`text-[10px] text-white ${activeLink === link.section ? 'text-color-light' : ''}`}>{link.text}</div>
+              </a>
             ) : (
-              <Link href={`#${link.section}`} className='group flex flex-col'>
-                <div className="text-3xl mb-1 mx-auto transition-colors duration-300 group-hover:text-color-light">
+              <ScrollLink
+                to={link.section}
+                spy={true}
+                smooth={false}
+                onSetActive={() => handleSetActive(link.section)}
+                className={`group flex flex-col cursor-pointer`}
+              >
+                <div className={`text-3xl mb-1 mx-auto transition-colors duration-300 group-hover:text-color-light ${activeLink === link.section ? 'text-color-light' : ''}`}>
                   {link.icon}
                 </div>
-                <div className='text-[10px] text-white '>{link.text}</div>
-              </Link>
+                <div className={`text-[10px] text-white ${activeLink === link.section ? 'text-color-light' : ''}`}>{link.text}</div>
+              </ScrollLink>
             )}
           </li>
         ))}
@@ -48,4 +61,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
